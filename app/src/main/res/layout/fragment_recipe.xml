@@ -120,7 +120,7 @@
             android:layout_gravity="bottom|center"
             android:background="#00ff0000"
             android:paddingBottom="60dp"
-            android:text="레시피보기"
+            android:text="@string/button_name"
             android:textSize="20dp" />
 
 

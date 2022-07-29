@@ -2,4 +2,5 @@
     <string name="app_name">FoodPrint</string>
     <!--  -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_name"><u>레시피 더보기</u></string>
 </resources>
