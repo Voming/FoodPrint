@@ -20,10 +20,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //각 요소와 연결
         etId = findViewById(R.id.etId)
         etPass = findViewById(R.id.etPass)
         btnLogin = findViewById<Button>(R.id.btnLogin)
 
+        //DB연결
         dbmanger = userDBManager(this, "userDB", null, 1)
 
         btnLogin.setOnClickListener {
@@ -39,10 +41,12 @@ class LoginActivity : AppCompatActivity() {
             while(cursor.moveToNext()) {
                 var search_pass = cursor.getString(cursor.getColumnIndex("pass")).toString()
 
+                //DB에서 찾은 비밀번호가 입력한 것과 같으면 로그인 성공
                 if(str_pass == search_pass)
                 {
                     Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
 
+                    //홈 페이지로 이동
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }

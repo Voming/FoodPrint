@@ -12,7 +12,8 @@
         android:id="@+id/imageView3"
         android:layout_width="269dp"
         android:layout_height="152dp"
-        app:srcCompat="@drawable/logo_texts" />
+        app:srcCompat="@drawable/logo_texts"
+        android:layout_marginTop="20dp"/>
 
     <ImageView
         android:id="@+id/imageView4"

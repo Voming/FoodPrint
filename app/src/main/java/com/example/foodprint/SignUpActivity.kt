@@ -24,6 +24,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        //각 요소와 연결
         etName = findViewById(R.id.etName)
         etId = findViewById(R.id.etId)
         etPass = findViewById(R.id.etPass)
@@ -34,6 +35,7 @@ class SignUpActivity : AppCompatActivity() {
         etweight = findViewById(R.id.etweight)
         btnSignUp = findViewById<Button>(R.id.btnSignUp)
 
+        //DB연결
         dbmanger = userDBManager(this, "userDB", null, 1)
 
         btnSignUp.setOnClickListener {
@@ -51,6 +53,7 @@ class SignUpActivity : AppCompatActivity() {
                 str_gender = female.text.toString()
             }
 
+            //사용자 정보 DB에 입력
             sqLitedb = dbmanger.writableDatabase
             sqLitedb.execSQL(
                 "INSERT INTO userDB VALUES('" + str_name + "', '" + str_id + "', '" + str_pass + "', '" + str_gender + "', '" +
@@ -59,8 +62,10 @@ class SignUpActivity : AppCompatActivity() {
             sqLitedb.close()
             dbmanger.close()
 
+            //입력 성공하면 토스트 메시지
             Toast.makeText(this, "회원가입 완료", Toast.LENGTH_SHORT).show()
 
+            //처음 페이지로 이동
             val intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
         }

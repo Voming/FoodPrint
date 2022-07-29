@@ -37,9 +37,11 @@ class SearchInfoActivity : AppCompatActivity() {
         //하단 네비게이션 호출
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
 
+        //화면 전환하면서 받아온 검색이름 저장
         val intent = intent
         val str_name = intent.extras!!.getString("intent_name")
 
+        //각 요소와 연결
         tvFoodName = findViewById(R.id.tvFoodName)
         pBarChoc = findViewById(R.id.pBarChoc)
         pBarProt = findViewById(R.id.pBarProt)
@@ -57,14 +59,16 @@ class SearchInfoActivity : AppCompatActivity() {
         pBarChoc.max = 300
         pBarChoc.progress = 150
 
-
+        //DB연결
         dbmanger = DBManager(this, "foodlistDB", null, 1)
         sqLitedb = dbmanger.readableDatabase
 
         var cursor: Cursor
 
+        //음식명을 검색해서 모든 정보 가져오기
         cursor = sqLitedb.rawQuery("SELECT * FROM foodlistDB WHERE name = '" + str_name + "';", null)
 
+        //정보 저장해서 출력
         while(cursor.moveToNext()){
             //1회 섭취참고량(칼로리)
             var servsize = cursor.getInt(cursor.getColumnIndex("servsize"))
