@@ -34,7 +34,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_list"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,21 +43,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:listitem="@layout/item_list" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".RecipeActivity">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            app:itemBackground="@color/darkgreen"
-            app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/navigation_menu" />
-    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/darkgreen"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation_menu" />
 
 </LinearLayout>
