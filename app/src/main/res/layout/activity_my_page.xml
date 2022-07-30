@@ -22,7 +22,7 @@
         app:itemBackground="@color/darkgreen"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
-        app:menu="@menu/navigation_menu"
-        app:labelVisibilityMode="unlabeled"/>
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation_menu" />
 
 </RelativeLayout>
