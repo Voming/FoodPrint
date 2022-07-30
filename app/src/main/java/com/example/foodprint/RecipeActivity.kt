@@ -1,6 +1,7 @@
 package com.example.foodprint
 
 import android.content.Intent
+import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,7 +25,7 @@ class RecipeActivity : AppCompatActivity() {
         var pager= findViewById<ViewPager>(R.id.pager)
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
 
-        // Set Home selected
+
 
         // Set Home selected
         bottomNavi.selectedItemId = R.id.action_recipe
@@ -95,6 +96,7 @@ class RecipeActivity : AppCompatActivity() {
         nextBtn1.setOnClickListener {
             pager.setCurrentItem(pager.currentItem+1,true)
         }
+
 
 
 
