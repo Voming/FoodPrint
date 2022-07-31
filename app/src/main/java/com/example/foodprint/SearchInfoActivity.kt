@@ -145,7 +145,6 @@ class SearchInfoActivity : AppCompatActivity() {
                 layout_items.orientation = LinearLayout.VERTICAL
 
                 var text: TextView = TextView(this)
-                text.setText(" < 추천하는 식단 > ")
                 text.textSize = 20f
                 text.setTextColor(Color.BLACK)
 
