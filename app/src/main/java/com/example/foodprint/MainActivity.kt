@@ -134,9 +134,9 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
     }
 
 
-   //ViewModel 설정
-   //View 에서 ViewModel 을 관찰하여 데이터가 변경될 때 내부적으로 자동으로 알 수 있도록 한다.
-   //ViewModel 은 View 와 ViewModel 의 분리로 액티비티가 destroy 되었다가 다시 create 되어도 종료되지 않고 가지고 있다.
+    //ViewModel 설정
+    //View 에서 ViewModel 을 관찰하여 데이터가 변경될 때 내부적으로 자동으로 알 수 있도록 한다.
+    //ViewModel 은 View 와 ViewModel 의 분리로 액티비티가 destroy 되었다가 다시 create 되어도 종료되지 않고 가지고 있다.
     private fun initViewModel() {
         toeatViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(ToEatViewModel::class.java)
@@ -146,8 +146,8 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
     }
 
 
-   //Recyclerview 설정
-   //Recyclerview adapter 와 LinearLayoutManager 를 만들고 연결
+    //Recyclerview 설정
+    //Recyclerview adapter 와 LinearLayoutManager 를 만들고 연결
     private fun initRecyclerview() {
         toeatListAdapter =
                 //adapter 에 click 시 식단 계획표 (toeat) -> Unit 파라미터로 넘겨준다
