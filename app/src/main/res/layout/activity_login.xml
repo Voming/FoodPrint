@@ -19,20 +19,20 @@
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/cookierun_bold"
         android:text="FOOD PRINT와 함께\n건강한 식습관을 만들어보아요"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cookierun_bold"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/cookierun_bold"
         android:text="아이디"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -42,8 +42,8 @@
         android:id="@+id/etId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cookierun_regular"
         android:ems="10"
+        android:fontFamily="@font/cookierun_regular"
         android:hint="아이디를 입력하세요"
         android:inputType="textPersonName" />
 
@@ -51,8 +51,8 @@
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cookierun_bold"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/cookierun_bold"
         android:text="비밀번호"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -62,8 +62,8 @@
         android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cookierun_regular"
         android:ems="10"
+        android:fontFamily="@font/cookierun_regular"
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPersonName" />
 
@@ -71,20 +71,20 @@
         android:id="@+id/btnLogin"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/green"
-        android:fontFamily="@font/cookierun_regular"
+        android:fontFamily="@font/cookierun_bold"
         android:text="로그인"
         android:textColor="#000000"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입 / 아이디 찾기 / 비밀번호 찾기"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/cookierun_regular"
-        android:textAlignment="center"
-        android:layout_marginTop="10dp"/>
+        android:text="회원가입 / 아이디 찾기 / 비밀번호 찾기"
+        android:textAlignment="center" />
 </LinearLayout>
