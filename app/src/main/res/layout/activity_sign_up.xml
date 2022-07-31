@@ -12,6 +12,7 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_bold"
         android:text="회원가입"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -22,6 +23,7 @@
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
         android:layout_marginTop="30dp"
         android:text="닉네임"
         android:textColor="#000000"
@@ -32,6 +34,8 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
+        android:textSize="16sp"
         android:ems="10"
         android:hint="닉네임을 입력하세요"
         android:inputType="textPersonName"
@@ -41,6 +45,7 @@
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_bold"
         android:layout_marginTop="30dp"
         android:text="아이디"
         android:textColor="#000000"
@@ -51,6 +56,8 @@
         android:id="@+id/etId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
+        android:textSize="16sp"
         android:ems="10"
         android:hint="아이디를 입력하세요"
         android:inputType="textPersonName" />
@@ -59,6 +66,7 @@
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_bold"
         android:layout_marginTop="30dp"
         android:text="비밀번호"
         android:textColor="#000000"
@@ -69,6 +77,8 @@
         android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
+        android:textSize="16sp"
         android:ems="10"
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPersonName" />
@@ -78,6 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/cookierun_bold"
         android:text="성별"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -96,12 +107,14 @@
                 android:id="@+id/male"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_regular"
                 android:text="남성" />
             <RadioButton
                 android:id="@+id/female"
                 android:layout_marginLeft="30dp"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_regular"
                 android:text="여성" />
         </RadioGroup>
     </LinearLayout>
@@ -110,6 +123,7 @@
         android:id="@+id/textView15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_bold"
         android:layout_marginTop="30dp"
         android:text="신체정보"
         android:textColor="#000000"
@@ -124,12 +138,16 @@
            android:id="@+id/etHeight"
            android:layout_width="150dp"
            android:layout_height="wrap_content"
+           android:fontFamily="@font/cookierun_regular"
+           android:textSize="16sp"
            android:hint="키"/>
         <EditText
             android:id="@+id/etweight"
             android:layout_marginLeft="30dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/cookierun_regular"
+            android:textSize="16sp"
             android:hint="몸무게"/>
 
     </LinearLayout>
@@ -139,6 +157,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
+        android:fontFamily="@font/cookierun_bold"
+        android:textSize="16sp"
         android:text="회원가입"
         android:textColor="#000000"
         android:textStyle="bold"

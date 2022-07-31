@@ -555,12 +555,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingTop="50dp"
+                    android:paddingBottom="60dp"
                     >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
                     <ImageView
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:src="@drawable/mush_7"
                         />
+                    </androidx.cardview.widget.CardView>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -570,13 +576,15 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="step 5"
+                            android:text="step 6"
+                            android:fontFamily="@font/cookierun_regular"
                             android:textColor="@color/darkpink"
                             android:textStyle="italic|bold"
                             android:paddingBottom="20dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
                             android:text="완성된 리조또를 그릇에 담고 구운 버섯과 다진 파슬리, 트러플 오일을 뿌려 맛있게 즐겨주세요."
                             android:textColor="@color/black"/>
                     </LinearLayout>

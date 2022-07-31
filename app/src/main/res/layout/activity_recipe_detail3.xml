@@ -483,6 +483,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingTop="50dp"
+                    android:paddingBottom="60dp"
                     >
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
@@ -517,9 +518,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
 
             </LinearLayout>
 

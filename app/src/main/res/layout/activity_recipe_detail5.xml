@@ -546,12 +546,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingTop="50dp"
+                    android:paddingBottom="60dp"
                     >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
                     <ImageView
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:src="@drawable/kimc_7"
                         />
+                    </androidx.cardview.widget.CardView>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

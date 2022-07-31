@@ -8,12 +8,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         >
 
         <!--  -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="20dp"
             >
@@ -45,7 +46,7 @@
                 android:fontFamily="@font/cookierun_regular"
                 android:layout_gravity="center"
                 android:textColor="@color/darkpink"
-                android:text="색다른 솥밥이 당길 때"
+                android:text="색다른 솥밥이 당길 때 "
                 android:textStyle="italic"
                 android:textSize="16dp"
                 />
@@ -510,6 +511,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingTop="50dp"
+                    android:paddingBottom="60dp"
                     >
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
@@ -547,8 +549,6 @@
 
             </LinearLayout>
 
-
-
         </LinearLayout>
     </ScrollView>
 
@@ -561,6 +561,7 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:labelVisibilityMode="unlabeled"
+        android:layout_alignParentBottom="true"
         app:menu="@menu/navigation_menu" />
 
 </FrameLayout>
