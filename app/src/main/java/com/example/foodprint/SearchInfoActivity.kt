@@ -128,15 +128,9 @@ class SearchInfoActivity : AppCompatActivity() {
                 var layout_items: LinearLayout = LinearLayout(this)
                 layout_items.orientation = LinearLayout.VERTICAL
 
-                var text: TextView = TextView(this)
-                text.setText(" < 추천하는 식단 > ")
-                text.textSize = 20f
-                text.setTextColor(Color.BLACK)
-
                 var Image: ImageView = ImageView(this)
                 Image.setImageResource(R.drawable.kimchi)
 
-                layout_items.addView(text)
                 layout_items.addView(Image)
                 layout.addView(layout_items)
             }
@@ -145,6 +139,7 @@ class SearchInfoActivity : AppCompatActivity() {
                 layout_items.orientation = LinearLayout.VERTICAL
 
                 var text: TextView = TextView(this)
+                text.setText(" < 추천하는 식단 > ")
                 text.textSize = 20f
                 text.setTextColor(Color.BLACK)
 
