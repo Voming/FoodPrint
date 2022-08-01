@@ -13,10 +13,9 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodprint.view.ToEatListAdapter
 import com.example.foodprint.viewmodel.ToEatViewModel
-import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(),CustomDialogInterface {
 
@@ -44,6 +43,9 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
     override fun onCreate( savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val intent = intent
+        val userName = intent.extras!!.getString("name")
 
         //RecyclerView 커스텀 달력이 수평으로 스크롤 되도록 LayoutManager 설정
         val monthListManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -79,21 +81,29 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
         // Perform item selected listener
 
         // Perform item selected listener
+
+        //사용자 이름 매 화면에 전달
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_calendar -> return@OnNavigationItemSelectedListener true
                 R.id.action_recipe -> {
-                    startActivity(Intent(applicationContext, RecipeActivity::class.java))
+                    val intent = Intent(this, RecipeActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_search -> {
-                    startActivity(Intent(applicationContext, SearchActivity::class.java))
+                    val intent = Intent(this, SearchActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_mypage -> {
-                    startActivity(Intent(applicationContext, MyPageActivity::class.java))
+                    val intent = Intent(this, MyPageActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
