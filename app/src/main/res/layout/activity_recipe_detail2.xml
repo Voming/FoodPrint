@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecipeDetail2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+        <!--  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe"
+                android:textColor="@color/darkgreen"
+                android:fontFamily="@font/cookierun_bold"
+                android:textSize="30dp"
+                android:textStyle="italic"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_bold"
+                android:text="버섯 리조또"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="28dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_regular"
+                android:text="표고버섯과 현미를 사용한"
+                android:textColor="@color/darkpink"
+                android:layout_gravity="center"
+                android:textStyle="italic"
+                android:textSize="16dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/time"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cookierun_regular"
+                    android:text=" 소요시간: 35분"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/level"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/cookierun_regular"
+                    android:text=" 난이도: 쉬움"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_regular"
+                android:text="재료"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:paddingTop="20dp"
+                android:textColor="@color/darkgreen"
+                />
+
+            <ImageView
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_7"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="35dp">
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/mush_1"
+                    />
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="기본 재료"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="현미밥"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="채수"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="표고버섯"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="화이트와인(생략가능)"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="두유"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="트러플오일(생략가능)"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="다진 파슬리"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="식용유"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="소금"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="후춧가루"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="기본 "
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:paddingBottom="5dp"
+                        android:visibility="invisible"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="1공기 반"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="500ml"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="8개"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="1/2컵"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="1/2컵"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="1작은술"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="약간"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="적당량"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="약간"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cookierun_regular"
+                        android:text="약간"
+                        android:textSize="12dp"
+
+                        android:paddingBottom="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierun_regular"
+                android:text="레시피"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:paddingTop="20dp"
+                android:textColor="@color/darkgreen"
+                />
+
+            <ImageView
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_7"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_2"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="step 1"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="버섯은 밑동을 자르고 채를 썰어 주세요. 기둥은 결대로 찢어주세요."
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="50dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_3"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="step 2"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="팬에 기름을 두르고 버섯과 소금, 후춧가루를 넣어 노릇해질 때까지 볶아주세요. "
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="50dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_4"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="step 3"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="볶은 버섯에 현미밥을 넣고 고루 섞어주세요. 화이트와인을 넣어 알콜이 날아가도록 볶아주세요."
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="50dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_5"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="step 4"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="채수 절반을 부어 뚜껑을 닫고 중약불에서 10분간 끓여 주세요. 채수가 반 정도 졸아들면 남은 채수를 넣고 주걱으로 저어가며 현미를 익혀주세요."
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="50dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_6"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="step 5"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="두유를 넣고 약불에서 잘 섞어주세요. 되직한 농도가 되면 불을 꺼주세요."
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="60dp"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="35dp">
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/mush_7"
+                        />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="step 6"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:textColor="@color/darkpink"
+                            android:textStyle="italic|bold"
+                            android:paddingBottom="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cookierun_regular"
+                            android:text="완성된 리조또를 그릇에 담고 구운 버섯과 다진 파슬리, 트러플 오일을 뿌려 맛있게 즐겨주세요."
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/darkgreen"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation_menu" />
+</FrameLayout>

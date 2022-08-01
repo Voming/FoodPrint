@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_day_layout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/item_day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
+        android:textSize="10sp"
+        android:text="9"/>
+
+    <ImageView
+        android:id="@+id/item_day_icon"
+        android:background="@drawable/none"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+</LinearLayout>

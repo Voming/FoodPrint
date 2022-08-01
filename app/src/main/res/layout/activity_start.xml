@@ -12,7 +12,8 @@
         android:id="@+id/imageView3"
         android:layout_width="269dp"
         android:layout_height="152dp"
-        app:srcCompat="@drawable/logo_texts" />
+        app:srcCompat="@drawable/logo_texts"
+        android:layout_marginTop="20dp"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -24,6 +25,8 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_bold"
+        android:textSize="15sp"
         android:text="FOOD PRINT와 함께\n 건강한 식습관을 만들어보아요"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -35,6 +38,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
+        android:fontFamily="@font/cookierun_bold"
+        android:textSize="16sp"
         android:text="로그인"
         android:textColor="#000000"
         android:textStyle="bold"
@@ -45,6 +50,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
+        android:fontFamily="@font/cookierun_bold"
+        android:textSize="16sp"
         android:text="회원가입"
         android:textColor="#000000"
         android:textStyle="bold"
@@ -54,6 +61,7 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cookierun_regular"
         android:text="아이디 찾기 / 비밀번호 찾기"
         android:textAlignment="center" />
 </LinearLayout>
