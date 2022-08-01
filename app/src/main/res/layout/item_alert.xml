@@ -25,6 +25,10 @@
             android:textSize="15sp"
             android:textColor="@color/black"
             android:text="00 : 00"/>
+        <Switch
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingLeft="5dp"/>
 
     </LinearLayout>
 

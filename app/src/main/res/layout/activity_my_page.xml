@@ -57,7 +57,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
-        android:text="이름"
+        android:text="슈니"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -160,7 +160,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="290dp"
             android:layout_marginTop="27dp"
-            android:text="60"
+            android:text="52"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -179,7 +179,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="59dp"
             android:layout_marginEnd="66dp"
-            android:text="1407"
+            android:text="1346"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -197,7 +197,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="27dp"
             android:layout_marginEnd="134dp"
-            android:text="160"
+            android:text="168"
             android:textAlignment="textEnd"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -340,6 +340,88 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:id="@+id/alertNm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="아침"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/addedTimem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:text="06 : 35"/>
+                        <Switch
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:id="@+id/alertl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="점심"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/addedTimel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:text="12 : 10"/>
+                        <Switch
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:id="@+id/alertNd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="저녁"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/addedTimed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:text="17 : 25"/>
+                        <Switch
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+
+                    </LinearLayout>
 
 
                 </LinearLayout>

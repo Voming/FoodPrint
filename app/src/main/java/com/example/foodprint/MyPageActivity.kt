@@ -1,6 +1,7 @@
 package com.example.foodprint
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -21,6 +22,8 @@ class MyPageActivity : AppCompatActivity() {
     lateinit var rate: TextView
     lateinit var editBtn_goal: ImageButton
     lateinit var editBtn_alert: ImageButton
+    lateinit var editText_weight: EditText //mypage 신체 정보 변경시 dialog의 edtiText
+    lateinit var editText_height: EditText
 
     lateinit var layout: LinearLayout //알림 리스트가 보여질 레이아웃
 
@@ -32,27 +35,43 @@ class MyPageActivity : AppCompatActivity() {
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
         // 연결
         editBtn_body = findViewById(R.id.editBtn_body)
-        height = findViewById(R.id.height)
-        weight = findViewById(R.id.weight)
+
         rate = findViewById(R.id.rate)
         editBtn_goal = findViewById(R.id.editBtn_goal)
         editBtn_alert = findViewById(R.id.editBtn_alert)
 
-        //val a: String = (655.1+(9.56*wei)+(1.85*hei)-(4.68*25)).toString()
+        // 신체 정보 편집 연결
+        //height = findViewById(R.id.height)
+        //weight = findViewById(R.id.weight)
+        //editText_weight = findViewById(R.id.editText_weight)
+        //editText_height = findViewById(R.id.editText_height)
+
+        //기초대사량
+        //val a: String = (655.1+(9.56*weight)+(1.85*height)-(4.68*25)).toString()
         //rate.setText(a)
 
         // 신체 정보 변경 버튼 클릭 > 편집 dialog 띄우기 > 변경 반영
         editBtn_body.setOnClickListener{
             var builder = AlertDialog.Builder(this)
+            /*val editW : EditText by lazy {
+                findViewById(R.id.editText_weight)
+            }
+            val we : TextView by lazy {
+                findViewById(R.id.weight)
+            }*/
+            //var h = editText_height.toString()
             builder.setTitle("신체 정보 변경")
+                .setPositiveButton("적용하기",DialogInterface.OnClickListener{
+                    dialog, id-> weight.text= "168"
+                    //editText_weight = findViewById(R.id.editText_weight)
+                    //editText_height = findViewById(R.id.editText_height)
+                    //we.setText(editText_weight.text)
+                })
 
             var editView1 = layoutInflater.inflate(R.layout.dialog_body, null)
             builder.setView(editView1)
             builder.show()
 
-            //builder.setPositiveButton("적용하기", new OnClickListener(){
-
-            //})
 /*
             editText_weight.findViewById<EditText>(R.id.editText_weight)
             editText_height.findViewById<EditText>(R.id.editText_height)
@@ -64,7 +83,8 @@ class MyPageActivity : AppCompatActivity() {
             showAddGoal()
         }
 
-        // 알림
+        // 기본 설정된 알람
+        /*
         layout = findViewById(R.id.alertList)
         var alertList = ArrayList<Alr>()
         alertList.add(Alr("아침",6,20))
@@ -72,8 +92,9 @@ class MyPageActivity : AppCompatActivity() {
         alertList.add(Alr("저녁",18,15))
 
 
-        //update_alert(alertList)
+        //update_alert(alertList) // 알람 리스트 갱신
         var num: Int =0
+        // 알람 리스트로 activity에 추가
         for(i in alertList)
         {
             var str_name = i.name
@@ -102,6 +123,8 @@ class MyPageActivity : AppCompatActivity() {
 
         }
 
+         */
+
         // 알림 변경 버튼 클릭: 알림 추가
         editBtn_alert.setOnClickListener{
 
@@ -121,11 +144,11 @@ class MyPageActivity : AppCompatActivity() {
             builder2.setView(editView2)
                 .setPositiveButton("적용하기"){
                         dialogInterface, i ->
-                    var n = a_name.getText().toString()
+                    //var n = a_name.getText().toString()
                     var h = a_hour.hour
                     var m = a_hour.minute
                     //alertList.add(Alr(a_name.text.toString(),h, m))
-                    update_alert(Alr(n, h, m),num++)
+                    //update_alert(Alr(n, h, m),num++)
                 }
             builder2.show()
 
@@ -167,15 +190,16 @@ class MyPageActivity : AppCompatActivity() {
             findViewById(R.id.goal)
         }
 
-        /*var builder = AlertDialog.Builder(this)
+        var builder = AlertDialog.Builder(this)
         val dialog = builder.setView(goalDialogView)
             .setPositiveButton("적용하기"){
                     dialogInterface, i ->
                 goal.setText(edt_goal.text) }
             .create()
-        dialog.show()*/
+        dialog.show()
     }
 
+    // 알람 변경시 리스트에 추가
     fun update_alert(al: Alr, num: Int){
         var str_name = al.name
         var str_hour = al.hour
