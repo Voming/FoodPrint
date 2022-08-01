@@ -112,7 +112,7 @@ class MyPageActivity : AppCompatActivity() {
             }
 */
         }
-
+//
         // 하단 네비게이션 이동
         bottomNavi.selectedItemId = R.id.action_mypage
 

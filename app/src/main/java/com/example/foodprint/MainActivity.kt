@@ -45,8 +45,6 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = intent
-        val userName = intent.extras!!.getString("name")
 
         //RecyclerView 커스텀 달력이 수평으로 스크롤 되도록 LayoutManager 설정
         val monthListManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -86,23 +84,17 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
             when (item.itemId) {
                 R.id.action_calendar -> return@OnNavigationItemSelectedListener true
                 R.id.action_recipe -> {
-                    val intent = Intent(this, RecipeActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, RecipeActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_search -> {
-                    val intent = Intent(this, SearchActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, SearchActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_mypage -> {
-                    val intent = Intent(this, MyPageActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, MyPageActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }

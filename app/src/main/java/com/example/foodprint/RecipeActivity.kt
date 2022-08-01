@@ -21,8 +21,6 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
-        /*val intent = intent
-        val userName = intent.extras!!.getString("name")*/
 
         var pager= findViewById<ViewPager>(R.id.pager)
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
@@ -33,7 +31,7 @@ class RecipeActivity : AppCompatActivity() {
         bottomNavi.selectedItemId = R.id.action_recipe
 
         // Perform item selected listener
-
+        //화면 이동
         // Perform item selected listener
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {

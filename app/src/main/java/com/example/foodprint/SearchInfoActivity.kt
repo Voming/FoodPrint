@@ -40,7 +40,6 @@ class SearchInfoActivity : AppCompatActivity() {
         //화면 전환하면서 받아온 검색이름 저장
         val intent = intent
         val str_name = intent.extras!!.getString("intent_name")
-        val userName = intent.extras!!.getString("name")
 
         //각 요소와 연결
         tvFoodName = findViewById(R.id.tvFoodName)
