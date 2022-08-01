@@ -18,24 +18,4 @@
         android:layout_height="wrap_content"
         android:timePickerMode="spinner" />
 
-    <Button
-        android:id="@+id/btn_removeAlert"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/lightgreen"
-        android:text="삭제하기"
-        android:layout_margin="5dp"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/btn_editalert"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/green"
-        android:text="적용하기"
-        android:layout_margin="5dp"
-        android:textColor="@color/black" />
-
 </LinearLayout>
