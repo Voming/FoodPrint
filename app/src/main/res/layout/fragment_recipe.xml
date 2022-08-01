@@ -60,7 +60,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="350dp"
-                    android:src="@drawable/time_white" />
+                    android:src="@drawable/time_white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="350dp"
-                    android:src="@drawable/level_white" />
+                    android:src="@drawable/level_white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
