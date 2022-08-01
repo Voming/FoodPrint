@@ -62,6 +62,7 @@ class MyPageActivity : AppCompatActivity() {
 
         // 키, 몸무게, 기초대사량, 목표설정 보이기
 
+
         //val a: String = (655.1+(9.56*wei)+(1.85*hei)-(4.68*25)).toString()
         //rate.setText(a)
 

@@ -21,8 +21,8 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
-        val intent = intent
-        val userName = intent.extras!!.getString("name")
+        /*val intent = intent
+        val userName = intent.extras!!.getString("name")*/
 
         var pager= findViewById<ViewPager>(R.id.pager)
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
@@ -38,24 +38,18 @@ class RecipeActivity : AppCompatActivity() {
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_calendar -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, MainActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_recipe -> return@OnNavigationItemSelectedListener true
                 R.id.action_search -> {
-                    val intent = Intent(this, SearchActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, SearchActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_mypage -> {
-                    val intent = Intent(this, MyPageActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, MyPageActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
