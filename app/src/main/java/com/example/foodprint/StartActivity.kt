@@ -17,7 +17,8 @@ class StartActivity : AppCompatActivity() {
         btnSignUp = findViewById(R.id.btnSignUp)
 
         btnLogin.setOnClickListener {
-            var intent = Intent(this, LoginActivity::class.java)
+            //var intent = Intent(this, LoginActivity::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         btnSignUp.setOnClickListener {
