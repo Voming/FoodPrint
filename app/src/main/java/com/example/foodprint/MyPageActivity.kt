@@ -16,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MyPageActivity : AppCompatActivity() {
 
     // 연결
+    lateinit var tvUserName: TextView
     lateinit var editBtn_body: ImageButton
     lateinit var height: TextView
     lateinit var weight: TextView
@@ -36,15 +37,24 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
+        //사용자 이름 받아오기
+        val intent = intent
+        val userName = intent.extras!!.getString("name")
+
+
         // 하단 네이게이션
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
         // 연결
+        tvUserName =findViewById(R.id.tvUserName)
         editBtn_body = findViewById(R.id.editBtn_body)
         height = findViewById(R.id.height)
         weight = findViewById(R.id.weight)
         rate = findViewById(R.id.rate)
         editBtn_goal = findViewById(R.id.editBtn_goal)
         editBtn_alert = findViewById(R.id.editBtn_alert)
+
+        //사용자 이름
+        tvUserName.setText(userName)
 
         //dbManager = AlertDBManager(this, "alertDB", null, 1)
 
@@ -115,17 +125,23 @@ class MyPageActivity : AppCompatActivity() {
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_calendar -> {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_recipe -> {
-                    startActivity(Intent(applicationContext, RecipeActivity::class.java))
+                    val intent = Intent(this, RecipeActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_search -> {
-                    startActivity(Intent(applicationContext, SearchActivity::class.java))
+                    val intent = Intent(this, SearchActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }

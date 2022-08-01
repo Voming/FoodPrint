@@ -2,7 +2,9 @@ package com.example.foodprint
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -13,15 +15,10 @@ import com.example.foodprint.view.ToEatListAdapter
 import com.example.foodprint.viewmodel.ToEatViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_search.*
-import kotlinx.android.synthetic.main.activity_search.view.*
-import kotlinx.android.synthetic.main.dialog_add.*
 import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(),CustomDialogInterface {
-
-
 
     val TAG: String = MainActivity::class.java.name;
 
@@ -136,16 +133,6 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
         Iconnum.num=5
     }
 
-    /*override fun onRbtnClicked(){
-        val radioG = linearLayout.findViewById<RadioGroup>(R.id.RdoGroup)
-        //var titl : String?= null
-        RdoGroup.setOnCheckedChangeListener { radioG , checkedId ->
-            when(checkedId){
-                R.id.rBtn1 -> title="아침"
-                R.id.rBtn2 -> title="점심"
-            }
-        }
-    }*/
 
     //ViewModel 설정
     //View 에서 ViewModel 을 관찰하여 데이터가 변경될 때 내부적으로 자동으로 알 수 있도록 한다.
@@ -187,9 +174,6 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
     //Toeat 리스트를 추가하는 Dialog 띄우기
     //ToeatModel 을 생성하여 리스트 add 해서 리스트를 갱신
     private fun showAddToeatDialog() {
-
-
-
         val dialogView = layoutInflater.inflate(R.layout.dialog_add, null)
         val et_add_title: EditText by lazy {
             dialogView.findViewById<EditText>(R.id.et_add_title)
@@ -198,11 +182,6 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
             dialogView.findViewById<EditText>(R.id.et_add_content)
         }
         var builder = AlertDialog.Builder(this)
-
-        var title:String?=null
-        //var title : String?= null
-
-
         val dialog = builder.setView(dialogView)
             .setPositiveButton(
                 "확인"
@@ -210,12 +189,11 @@ class MainActivity : AppCompatActivity(),CustomDialogInterface {
                 var id: Long? = null
                 val title = et_add_title.text.toString()
                 val content = et_add_content.text.toString()
-
                 val createdDate = Date().time
                 val todoModel = ToEatModel(
                     id,
                     toeatListAdapter.getItemCount() + 1,
-                    title ,
+                    title,
                     content,
                     createdDate
                 )
