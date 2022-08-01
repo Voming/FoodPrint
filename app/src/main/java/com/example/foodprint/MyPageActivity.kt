@@ -16,7 +16,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MyPageActivity : AppCompatActivity() {
 
     // 연결
-    lateinit var tvUserName: TextView
     lateinit var editBtn_body: ImageButton
     lateinit var height: TextView
     lateinit var weight: TextView
@@ -37,24 +36,15 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
-        //사용자 이름 받아오기
-        val intent = intent
-        val userName = intent.extras!!.getString("name")
-
-
         // 하단 네이게이션
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
         // 연결
-        tvUserName =findViewById(R.id.tvUserName)
         editBtn_body = findViewById(R.id.editBtn_body)
         height = findViewById(R.id.height)
         weight = findViewById(R.id.weight)
         rate = findViewById(R.id.rate)
         editBtn_goal = findViewById(R.id.editBtn_goal)
         editBtn_alert = findViewById(R.id.editBtn_alert)
-
-        //사용자 이름
-        tvUserName.setText(userName)
 
         //dbManager = AlertDBManager(this, "alertDB", null, 1)
 
@@ -89,10 +79,13 @@ class MyPageActivity : AppCompatActivity() {
 
         // 목표 변경 버튼 클릭 > SharedPreferences 사용해 앱 내 폴더에 목표만 저장
         editBtn_goal.setOnClickListener{
-            showAddGoal()
+            /*var builder = AlertDialog.Builder(this)
+            builder.setTitle("목표 변경")
+
+            var editView1 = layoutInflater.inflate(R.layout.dialog_goal, null)
+            builder.setView(editView1)
+            builder.show()*/
         }
-
-
 
         // 알림 수정: 알림 클릭 시 편집
 
@@ -126,23 +119,17 @@ class MyPageActivity : AppCompatActivity() {
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_calendar -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, MainActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_recipe -> {
-                    val intent = Intent(this, RecipeActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, RecipeActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_search -> {
-                    val intent = Intent(this, SearchActivity::class.java)
-                    intent.putExtra("name", userName)
-                    startActivity(intent)
+                    startActivity(Intent(applicationContext, SearchActivity::class.java))
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
@@ -162,23 +149,4 @@ class MyPageActivity : AppCompatActivity() {
 
         }
     }*/
-
-    //목표 변경 다이얼로그
-    fun showAddGoal(){
-        val goalDialogView = layoutInflater.inflate(R.layout.dialog_goal,null)
-        val edt_goal : EditText by lazy {
-            goalDialogView.findViewById(R.id.editText_goal)
-        }
-        val goal : TextView by lazy {
-            findViewById(R.id.goal)
-        }
-
-        var builder = AlertDialog.Builder(this)
-        val dialog = builder.setView(goalDialogView)
-            .setPositiveButton("적용하기"){
-                dialogInterface, i ->
-            goal.setText(edt_goal.text) }
-            .create()
-        dialog.show()
-    }
 }
