@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
             cursor = sqLitedb.rawQuery("SELECT * FROM userDB WHERE id = '"+ str_id+"';", null)
             while(cursor.moveToNext()) {
                 var search_pass = cursor.getString(cursor.getColumnIndex("pass")).toString()
+                var userName = cursor.getString(cursor.getColumnIndex("name")).toString()
 
                 //DB에서 찾은 비밀번호가 입력한 것과 같으면 로그인 성공
                 if(str_pass == search_pass)
@@ -48,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
 
                     //홈 페이지로 이동
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("name", userName)
                     startActivity(intent)
                 }
                 else {

@@ -40,6 +40,7 @@ class SearchInfoActivity : AppCompatActivity() {
         //화면 전환하면서 받아온 검색이름 저장
         val intent = intent
         val str_name = intent.extras!!.getString("intent_name")
+        val userName = intent.extras!!.getString("name")
 
         //각 요소와 연결
         tvFoodName = findViewById(R.id.tvFoodName)
@@ -138,15 +139,9 @@ class SearchInfoActivity : AppCompatActivity() {
                 var layout_items: LinearLayout = LinearLayout(this)
                 layout_items.orientation = LinearLayout.VERTICAL
 
-                var text: TextView = TextView(this)
-                text.setText(" < 추천하는 식단 > ")
-                text.textSize = 20f
-                text.setTextColor(Color.BLACK)
-
                 var Image: ImageView = ImageView(this)
                 Image.setImageResource(R.drawable.seaweed)
 
-                layout_items.addView(text)
                 layout_items.addView(Image)
                 layout.addView(layout_items)
             }
