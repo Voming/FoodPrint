@@ -10,6 +10,9 @@ class RecipeDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_detail)
 
+        val intent = intent
+        val userName = intent.extras!!.getString("name")
+
         var bottomNavi = findViewById(R.id.bottom_navigation) as BottomNavigationView
 
         // Set Home selected
@@ -23,18 +26,24 @@ class RecipeDetail : AppCompatActivity() {
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_calendar -> {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_recipe -> return@OnNavigationItemSelectedListener true
                 R.id.action_search -> {
-                    startActivity(Intent(applicationContext, SearchActivity::class.java))
+                    val intent = Intent(this, SearchActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_mypage -> {
-                    startActivity(Intent(applicationContext, MyPageActivity::class.java))
+                    val intent = Intent(this, MyPageActivity::class.java)
+                    intent.putExtra("name", userName)
+                    startActivity(intent)
                     overridePendingTransition(0, 0)
                     return@OnNavigationItemSelectedListener true
                 }
