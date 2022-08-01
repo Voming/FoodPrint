@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.calendar_dialog.*
+import kotlinx.android.synthetic.main.dialog_add.*
 
 class CustomDialog(context: Context,
                    CustomDialogInterface : CustomDialogInterface)
@@ -27,6 +28,8 @@ class CustomDialog(context: Context,
         btn3.setOnClickListener(this)
         btn4.setOnClickListener(this)
         btn5.setOnClickListener(this)
+
+
     }
 
     override fun onClick(view: View?) {
@@ -52,6 +55,7 @@ class CustomDialog(context: Context,
                 this.CustomDialogInterface?.onBtn5clicked()
                 dismiss()
             }
+
         }
     }
 

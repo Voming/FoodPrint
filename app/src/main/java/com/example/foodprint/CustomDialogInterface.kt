@@ -6,4 +6,5 @@ interface CustomDialogInterface {
     fun onBtn3clicked()
     fun onBtn4clicked()
     fun onBtn5clicked()
+
 }

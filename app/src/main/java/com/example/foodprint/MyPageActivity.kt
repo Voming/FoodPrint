@@ -78,13 +78,10 @@ class MyPageActivity : AppCompatActivity() {
 
         // 목표 변경 버튼 클릭 > SharedPreferences 사용해 앱 내 폴더에 목표만 저장
         editBtn_goal.setOnClickListener{
-            /*var builder = AlertDialog.Builder(this)
-            builder.setTitle("목표 변경")
-
-            var editView1 = layoutInflater.inflate(R.layout.dialog_goal, null)
-            builder.setView(editView1)
-            builder.show()*/
+            showAddGoal()
         }
+
+
 
         // 알림 수정: 알림 클릭 시 편집
 
@@ -148,4 +145,23 @@ class MyPageActivity : AppCompatActivity() {
 
         }
     }*/
+
+    //목표 변경 다이얼로그
+    fun showAddGoal(){
+        val goalDialogView = layoutInflater.inflate(R.layout.dialog_goal,null)
+        val edt_goal : EditText by lazy {
+            goalDialogView.findViewById(R.id.editText_goal)
+        }
+        val goal : TextView by lazy {
+            findViewById(R.id.goal)
+        }
+
+        var builder = AlertDialog.Builder(this)
+        val dialog = builder.setView(goalDialogView)
+            .setPositiveButton("적용하기"){
+                dialogInterface, i ->
+            goal.setText(edt_goal.text) }
+            .create()
+        dialog.show()
+    }
 }
